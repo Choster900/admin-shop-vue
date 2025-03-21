@@ -2,7 +2,7 @@ import { tesloApi } from "@/api/tesloapi";
 import type { Producto } from "../interfaces/products.interface";
 
 
-export const getProductsAction = async (page: number, limit: number) => {
+export const getProductsAction = async (page: number = 1, limit: number = 10) => {
   try {
     const { data } = await tesloApi.get<Producto[]>(`/products?limit=${limit}&offset=${page * limit}`);
     console.log(data);
