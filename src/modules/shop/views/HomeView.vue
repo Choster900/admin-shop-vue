@@ -374,7 +374,6 @@ const { data, isLoading } = useQuery({
 });
 
 
-getProductsAction();
 </script>
 
 <style lang="scss" scoped></style>
